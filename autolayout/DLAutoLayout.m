@@ -52,6 +52,7 @@
     NSInteger idx = [view.superview.subviews indexOfObject:view];
     [view removeFromSuperview];
     [parent insertSubview:view atIndex:idx];
+    [[self dl_constraintInfo] removeAllObjects];
     return self;
 }
 
